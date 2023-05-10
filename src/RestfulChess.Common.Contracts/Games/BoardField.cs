@@ -16,5 +16,7 @@ namespace RestfulChess.Common.Contracts.Games
         public ChessFigure FigureOnField { get; set; }
 
         public bool HasFigureOnField => FigureOnField != null;
+
+        public BoardPosition Position { get; set; }
     }
 }

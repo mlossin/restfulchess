@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestfulChess.Common.Contracts\RestfulChess.Common.Contracts.csproj" />
+    <ProjectReference Include="..\RestfulChess.Common.Implementations\RestfulChess.Common.Implementations.csproj" />
+  </ItemGroup>
+
+</Project>
