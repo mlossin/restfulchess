@@ -7,7 +7,13 @@ It is meant to just implement HATEOAS as most RESTful APIs, especially in fat-cl
 The stateful application shall be a chess board. It provides all further step information after a request to the current state.
 
 ## Technical Information
-For the first step this project is realized using ASP.NET (Core) WebApi and .NET 6
+.NET Version 6 LTS
+Web Api using Asp.NET Core 6
+Validation using FluentValidation
+Unit Tests using MSTestv2
+Dependeny Injection using MS DI
+
+Architectural Pattern: Trying Composite Components
 
 ## HATEOAS
 Hypermedia as the engine of application state (HATEOAS) is the last constraint to a resful api concerning richardsons maturity model.
