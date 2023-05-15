@@ -34,13 +34,14 @@ namespace RestfullChess.Api.Controllers
         }
 
         [HttpGet("{column}/{row}/{player}")]
-
         public async Task<IActionResult> GetByFieldAsync(
             int player,
             int column,
             int row)
         {
-
+            var playerColor = (EPlayerColors)player;
+            var columnTyp = (EColumnPosition)column;
+            var rowPosition = (ERowPosition)row;
         }
 
         //// GET api/<BoardController>/5
