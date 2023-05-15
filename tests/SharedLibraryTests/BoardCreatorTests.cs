@@ -15,6 +15,7 @@ namespace SharedLibraryTests
             
             //Act 
             var validationResult = validator.Validate(chessBoard);
+
             //Assert
             Assert.IsNotNull(chessBoard);
             Assert.AreEqual(64, chessBoard.Fields.Count);

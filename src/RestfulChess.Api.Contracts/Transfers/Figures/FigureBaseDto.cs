@@ -10,12 +10,12 @@ namespace RestfulChess.Common.Contracts.Figures
     /// <summary>
     /// Base class for all chess figures
     /// </summary>
-    [KnownType(typeof(King))]
-    [KnownType(typeof(Queen))]
-    [KnownType(typeof(Bishop))]
-    [KnownType(typeof(Rook))]
-    [KnownType(typeof(Knight))]
-    [KnownType(typeof(Pawn))]
+    [KnownType(typeof(KingDto))]
+    [KnownType(typeof(QueenDto))]
+    [KnownType(typeof(BishopDto))]
+    [KnownType(typeof(RookDto))]
+    [KnownType(typeof(KnightDto))]
+    [KnownType(typeof(PawnDto))]
     public abstract class ChessFigure
     {
         public EPlayerColors Color { get; set; }

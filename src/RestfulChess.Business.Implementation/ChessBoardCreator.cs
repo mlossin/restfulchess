@@ -10,7 +10,7 @@ using RestfulChess.Common.Contracts;
 
 namespace RestfulChess.Business.Implementation
 {
-    public class ChessBoardCreator
+    internal class ChessBoardCreator
     {
         public ChessBoard CreateChessBoard()
         {

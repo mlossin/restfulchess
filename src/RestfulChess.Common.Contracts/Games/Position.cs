@@ -1,6 +1,6 @@
 ﻿using RestfulChess.Common.Contracts.Enumerations;
 
-namespace RestfulChess.Common.Contracts
+namespace RestfulChess.Common.Contracts.Games
 {
     /// <summary>
     /// A position on a chess board by its column and row coordinates

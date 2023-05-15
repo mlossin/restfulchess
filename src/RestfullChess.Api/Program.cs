@@ -1,3 +1,5 @@
+using RestfulChess.Business.Implementation;
+
 namespace RestfullChess.Api
 {
     public class Program
@@ -7,14 +9,19 @@ namespace RestfullChess.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            new RegisterApiComponent().Register(builder.Services);
+            new BusinessComponentRegistration().Register(builder.Services);
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
+            // Build middleware
             var app = builder.Build();
+            ApplyMiddleware(app);
 
+            // Run
+            app.Run();
+        }
+
+        private static void ApplyMiddleware(WebApplication app)
+        {
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
@@ -26,10 +33,7 @@ namespace RestfullChess.Api
 
             app.UseAuthorization();
 
-
             app.MapControllers();
-
-            app.Run();
         }
     }
 }
