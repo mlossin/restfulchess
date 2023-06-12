@@ -20,9 +20,19 @@ namespace RestfulChess.Common.Contracts.Figures
     {
         public EPlayerColors Color { get; set; }
 
+        protected ChessFigure()
+        {
+            Position = new BoardPosition(EColumnPosition.None, ERowPosition.None);
+        }
+
         /// <summary>
         /// Position of the figure. Null means not on the board!
         /// </summary>
         public BoardPosition Position { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Color.ToString()} {this.GetType().Name} at {Position?.ToString() ?? "Not on field"}";
+        }
     }
 }

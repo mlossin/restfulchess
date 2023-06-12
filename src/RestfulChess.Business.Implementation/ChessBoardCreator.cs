@@ -1,16 +1,13 @@
 ﻿using RestfulChess.Common.Contracts.Enumerations;
 using RestfulChess.Common.Contracts.Games;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using RestfulChess.Common.Implementations;
 using System.Linq;
 using RestfulChess.Common.Implementations.Extensions;
-using RestfulChess.Common.Contracts;
 
 namespace RestfulChess.Business.Implementation
 {
-    internal class ChessBoardCreator
+    public class ChessBoardCreator
     {
         public ChessBoard CreateChessBoard()
         {
@@ -47,6 +44,5 @@ namespace RestfulChess.Business.Implementation
             };
             return chessBoard;
         }
-
     }
 }

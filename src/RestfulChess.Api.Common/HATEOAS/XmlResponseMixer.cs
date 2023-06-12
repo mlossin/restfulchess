@@ -13,11 +13,12 @@ namespace RestfulChess.Api.Common.HATEOAS
     {
         public void WriteXml(XmlWriter writer)
         {
-            foreach (var key in expando.Keys)
-            {
-                var value = expando[key];
-                WriteLinksToXml(key, value, writer);
-            }
+            //TODO: Fix
+            //foreach (var key in expando.Keys)
+            //{
+            //    var value = expando[key];
+            //    WriteLinksToXml(key, value, writer);
+            //}
         }
 
         /// <summary>

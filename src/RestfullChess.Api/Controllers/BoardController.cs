@@ -42,6 +42,7 @@ namespace RestfullChess.Api.Controllers
             var playerColor = (EPlayerColors)player;
             var columnTyp = (EColumnPosition)column;
             var rowPosition = (ERowPosition)row;
+            return Ok();
         }
 
         //// GET api/<BoardController>/5

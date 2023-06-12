@@ -16,7 +16,7 @@ namespace RestfulChess.Common.Contracts.Figures
     [KnownType(typeof(RookDto))]
     [KnownType(typeof(KnightDto))]
     [KnownType(typeof(PawnDto))]
-    public abstract class ChessFigure
+    public abstract class ChessFigureDto
     {
         public EPlayerColors Color { get; set; }
 

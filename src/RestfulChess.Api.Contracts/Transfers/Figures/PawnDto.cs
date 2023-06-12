@@ -7,7 +7,7 @@ namespace RestfulChess.Common.Contracts.Figures
     /// <summary>
     /// Chess figure forward only movement of a field with some exceptions
     /// </summary>
-    public class PawnDto : ChessFigure
+    public class PawnDto : ChessFigureDto
     {
         private int _baseValue = 1;
     }

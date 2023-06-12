@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RestfulChess.Api.Contracts\RestfulChess.Api.Contracts.csproj" />
     <ProjectReference Include="..\RestfulChess.Business.Contracts\RestfulChess.Business.Contracts.csproj" />
     <ProjectReference Include="..\RestfulChess.Common.Contracts\RestfulChess.Common.Contracts.csproj" />
     <ProjectReference Include="..\RestfulChess.Common.Implementations\RestfulChess.Common.Implementations.csproj" />

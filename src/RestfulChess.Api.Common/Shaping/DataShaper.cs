@@ -1,9 +1,9 @@
-﻿using System;
+﻿using RestfulChess.Api.Contracts.Shaping;
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace RestfulChess.Api.Common.Shaping
 {
@@ -33,14 +33,15 @@ namespace RestfulChess.Api.Common.Shaping
             var requiredProperties = new List<PropertyInfo>();
             if (!string.IsNullOrWhiteSpace(fieldsString))
             {
-                var fields = fieldsString.Split(',', StringSplitOptions.RemoveEmptyEntries);
-                foreach (var field in fields)
-                {
-                    var property = Properties.FirstOrDefault(pi => pi.Name.Equals(field.Trim(), StringComparison.InvariantCultureIgnoreCase));
-                    if (property == null)
-                        continue;
-                    requiredProperties.Add(property);
-                }
+                //TODO: FIX this
+                //var fields = fieldsString.Split(',', StringSplitOptions.RemoveEmptyEntries);
+                //foreach (var field in fields)
+                //{
+                //    var property = Properties.FirstOrDefault(pi => pi.Name.Equals(field.Trim(), StringComparison.InvariantCultureIgnoreCase));
+                //    if (property == null)
+                //        continue;
+                //    requiredProperties.Add(property);
+                //}
             }
             else
             {
@@ -64,7 +65,8 @@ namespace RestfulChess.Api.Common.Shaping
             foreach (var property in requiredProperties)
             {
                 var objectPropertyValue = property.GetValue(entity);
-                shapedObject.TryAdd(property.Name, objectPropertyValue);
+                //TODO: Fix this
+                //shapedObject.TryAdd(property.Name, objectPropertyValue);
             }
             return shapedObject;
         }

@@ -13,7 +13,7 @@ namespace RestfulChess.Common.Contracts.Games
     {
         public EPlayerColors FieldColor { get; set; }
 
-        public ChessFigure FigureOnField { get; set; }
+        public ChessFigureDto FigureOnField { get; set; }
 
         public bool HasFigureOnField => FigureOnField != null;
 

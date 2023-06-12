@@ -10,7 +10,7 @@ namespace RestfulChess.Common.Contracts.Games
     /// </summary>
     public class FigureBoxDto
     {
-        public IList<ChessFigure> Figures { get; set; }
+        public IList<ChessFigureDto> Figures { get; set; }
         public IList<KingDto> Kings { get; set; }
         public IList<QueenDto> Queens { get; set; }
         public IList<BishopDto> Bishops { get; set; }
