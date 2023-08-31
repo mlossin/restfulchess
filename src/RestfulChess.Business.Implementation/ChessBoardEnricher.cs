@@ -13,7 +13,7 @@ namespace RestfulChess.Business.Implementation
     {
         private readonly ChessBoardFigureMover chessBoardFigureMover;
         private readonly ERowPosition whiteBackrow = ERowPosition.One;
-        private readonly ERowPosition whitePawnRiw = ERowPosition.Two;
+        private readonly ERowPosition whitePawnRow = ERowPosition.Two;
         private readonly ERowPosition blackBackrow = ERowPosition.Eight;
         private readonly ERowPosition blackPawnRow= ERowPosition.Seven;
         private readonly EColumnPosition kingColumn = EColumnPosition.E;
@@ -45,8 +45,6 @@ namespace RestfulChess.Business.Implementation
 
         private void FillKingsAndQueens(ChessBoard board)
         {
-
-
             // Black figures
 
             var blackQueen = new Queen(){ Color = EPlayerColors.Black};
@@ -64,18 +62,35 @@ namespace RestfulChess.Business.Implementation
 
         private void FillBishops(ChessBoard board)
         {
+            throw new NotImplementedException();
             var blackBishop1 = new Bishop() { Color = EPlayerColors.Black };
             var blackBishop2 = new Bishop() { Color = EPlayerColors.Black };
+            //TODO: Move
+            var whiteBishop1 = new Bishop() { Color = EPlayerColors.White };
+            var whiteBishop2 = new Bishop() { Color = EPlayerColors.White };
+            //TODO: Move
         }
 
         private void FillKnights(ChessBoard board)
         {
             throw new NotImplementedException();
+            var blackKnight1 = new Knight() {  Color = EPlayerColors.Black };
+            var blackKnight2 = new Knight() {  Color = EPlayerColors.Black };
+            //TODO: Move
+            var whiteKnight1 = new Knight() { Color = EPlayerColors.White };
+            var whiteKnight2 = new Knight() { Color = EPlayerColors.White };
+            //TODO: Move
         }
 
         private void FillRooks(ChessBoard board)
         {
             throw new NotImplementedException();
+            var blackRook1 = new Rook() {  Color = EPlayerColors.Black };
+            var blackRook2 = new Rook() {  Color = EPlayerColors.Black };
+            //TODO: Move
+            var whiteRook1 = new Rook() { Color = EPlayerColors.White };
+            var whiteRook2 = new Rook() { Color= EPlayerColors.White };
+            //TODO: Move
         }
 
         /// <summary>
@@ -97,7 +112,5 @@ namespace RestfulChess.Business.Implementation
                 chessBoardFigureMover.MoveFigureToField(board, whitePawnPosition, whitePawn);
             }
         }
-
-       
     }
 }
