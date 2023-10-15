@@ -31,3 +31,4 @@ It is not trivial to implement each response with a given state and further acti
 
 ## Sources
 This is a custom implementation inspired by https://code-maze.com/hateoas-aspnet-core-web-api/
+Rules of Chess https://en.wikipedia.org/wiki/Rules_of_chess
