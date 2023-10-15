@@ -9,6 +9,9 @@ namespace RestfulChess.Business.Implementation
 {
     public class ChessBoardCreator
     {
+        /// <summary>
+        /// Creates a chess board with its switching colors.
+        /// </summary>
         public ChessBoard CreateChessBoard()
         {
             var currentColor = EPlayerColors.Black;
