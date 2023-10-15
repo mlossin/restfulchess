@@ -24,10 +24,21 @@ namespace RestfullChess.Api.Controllers
         }
 
         // GET: api/<BoardController>
-        [HttpGet]
-        public async Task<IActionResult> GetAsync()
+        [HttpGet("empty")]
+        public async Task<IActionResult> GetEmptyBoardAsync()
         {
-            var chessBoard = new ChessBoardCreator().CreateChessBoard();
+            var chessBoard = new ChessBoardCreator().CreateChessBoard(); //ToDo: DI
+            var result = mapper.Map<ChessBoardDto>(chessBoard);
+            await Task.CompletedTask;
+            return Ok(result);
+        }
+
+        [HttpGet("new")]
+        public async Task<IActionResult> GetNewBoardAsync()
+        {
+            var chessBoard = new ChessBoardCreator().CreateChessBoard(); //ToDo: DI
+            var boardEnricher = new ChessBoardEnricher(new ChessBoardFigureMover());//ToDo: DI
+            boardEnricher.FillChessBoard(chessBoard);
             var result = mapper.Map<ChessBoardDto>(chessBoard);
             await Task.CompletedTask;
             return Ok(result);
