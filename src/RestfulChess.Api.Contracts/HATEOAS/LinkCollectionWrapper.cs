@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace RestfulChess.Api.Contracts.HATEOAS
 {
@@ -10,13 +9,14 @@ namespace RestfulChess.Api.Contracts.HATEOAS
     /// <typeparam name="T"></typeparam>
     public class LinkCollectionWrapper<T> : LinkResourceBase
     {
-        public List<T> Value { get; set; } = new List<T>();
+        public List<T> Values { get; set; } = new List<T>();
         public LinkCollectionWrapper()
         {
+            Values = new List<T>();
         }
-        public LinkCollectionWrapper(List<T> value)
+        public LinkCollectionWrapper(List<T> values)
         {
-            Value = value;
+            Values = values ?? throw new ArgumentNullException(nameof(values));
         }
     }
 }

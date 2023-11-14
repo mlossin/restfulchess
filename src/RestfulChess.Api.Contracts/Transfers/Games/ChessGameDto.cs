@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RestfulChess.Common.Contracts.Games
+﻿namespace RestfulChess.Common.Contracts.Games
 {
     /// <summary>
     /// Chess game information including the current board, player information and so on

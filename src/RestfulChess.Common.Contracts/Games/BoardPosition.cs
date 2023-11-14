@@ -11,10 +11,7 @@ namespace RestfulChess.Common.Contracts.Games
         public ERowPosition Row { get; set; }
 
         //Default Constructor for Serialization
-        public BoardPosition()
-        {
-            
-        }
+        public BoardPosition(){}
 
         // Parameterized Constructor
         public BoardPosition(EColumnPosition column, ERowPosition row)

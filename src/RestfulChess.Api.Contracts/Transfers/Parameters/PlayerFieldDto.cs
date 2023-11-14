@@ -1,7 +1,4 @@
 ﻿using RestfulChess.Common.Contracts.Enumerations;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RestfulChess.Api.Contracts.Transfers.Parameters
 {

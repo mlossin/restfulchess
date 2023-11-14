@@ -1,9 +1,6 @@
 ﻿using RestfulChess.Common.Contracts.Enumerations;
 using RestfulChess.Common.Contracts.Games;
-using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace RestfulChess.Common.Contracts.Figures
 {
@@ -18,6 +15,8 @@ namespace RestfulChess.Common.Contracts.Figures
     [KnownType(typeof(PawnDto))]
     public abstract class ChessFigureDto
     {
+        public abstract FigureType FigureType { get; }
+
         public EPlayerColors Color { get; set; }
 
         /// <summary>

@@ -1,5 +1,4 @@
 ﻿using RestfulChess.Common.Contracts.Enumerations;
-using System.Collections;
 
 namespace RestfulChess.Common.Contracts.Games
 {

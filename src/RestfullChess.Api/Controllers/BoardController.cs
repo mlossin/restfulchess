@@ -9,7 +9,8 @@ using RestfulChess.Common.Contracts.Games;
 
 namespace RestfullChess.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/board")]
     [ApiController]
     public class BoardController : ControllerBase
     {
@@ -25,6 +26,7 @@ namespace RestfullChess.Api.Controllers
 
         // GET: api/<BoardController>
         [HttpGet("empty")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> GetEmptyBoardAsync()
         {
             var chessBoard = new ChessBoardCreator().CreateChessBoard(); //ToDo: DI
@@ -34,6 +36,7 @@ namespace RestfullChess.Api.Controllers
         }
 
         [HttpGet("new")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> GetNewBoardAsync()
         {
             var chessBoard = new ChessBoardCreator().CreateChessBoard(); //ToDo: DI
@@ -44,17 +47,14 @@ namespace RestfullChess.Api.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{column}/{row}/{player}")]
-        public async Task<IActionResult> GetByFieldAsync(
-            int player,
-            int column,
-            int row)
+        [HttpGet("current")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetCurrentBoard()
         {
-            var playerColor = (EPlayerColors)player;
-            var columnTyp = (EColumnPosition)column;
-            var rowPosition = (ERowPosition)row;
-            return Ok();
+            await Task.CompletedTask;
+            return NotFound();
         }
+
 
         //// GET api/<BoardController>/5
         //[HttpGet("{id}")]

@@ -32,7 +32,7 @@ namespace RestfulChess.Common.Contracts.Figures
 
         public override string ToString()
         {
-            return $"{Color.ToString()} {this.GetType().Name} at {Position?.ToString() ?? "Not on field"}";
+            return $"{Color.ToString()} {GetType().Name} at {Position?.ToString() ?? "Not on field"}";
         }
     }
 }
