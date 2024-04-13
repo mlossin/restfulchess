@@ -1,0 +1,29 @@
+Restful Routing shall use full resource locations that can be filtered by sublocations
+
+All resources are bound to a game with its id
+
+
+{gameid}/figures/black
+{gameid}/figures/white
+{gameid}/figures/kings
+{gameid}/figures/queens
+{gameid}/figures/rooks
+{gameid}/figures/bishops
+{gameid}/figures/knights
+{gameid}/figures/pawns
+
+{gameid}/board
+{gameid}/board/whitefigures
+{gameid}/board/blackfigures
+{gameid}/board/position GET for all moves of the figure for the current position
+{gameid}/board/position POST move the figure from the position to a new position
+
+
+game/ POST to create a new game
+game/{gameid} => state of the current game
+
+
+
+
+
+

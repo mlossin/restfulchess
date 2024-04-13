@@ -1,9 +1,6 @@
 ﻿using RestfulChess.Common.Contracts.Enumerations;
 using RestfulChess.Common.Contracts.Games;
-using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace RestfulChess.Common.Contracts.Figures
 {
@@ -29,6 +26,8 @@ namespace RestfulChess.Common.Contracts.Figures
         /// Position of the figure. Null means not on the board!
         /// </summary>
         public BoardPosition Position { get; set; }
+
+        public abstract FigureType GetFigureType();
 
         public override string ToString()
         {

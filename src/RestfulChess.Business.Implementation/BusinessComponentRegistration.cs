@@ -11,10 +11,11 @@ namespace RestfulChess.Business.Implementation
     {
         public void Register(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddSingleton<IChessGame,ChessGame>();
+            serviceCollection.AddTransient<IChessGameProcessor,ChessGameProcessor>();
             serviceCollection.AddTransient<ChessBoardCreator>();
             serviceCollection.AddTransient<ChessBoardEnricher>();
             serviceCollection.AddTransient<ChessBoardFigureMover>();
+            serviceCollection.AddTransient<IChessGameProvider, ChessGameProvider>();
         }
     }
 }

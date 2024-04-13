@@ -1,4 +1,5 @@
 using RestfulChess.Business.Implementation;
+using RestfulChess.DataAccess.InMemory;
 using RestfullChess.Api.Middlewares;
 
 namespace RestfullChess.Api
@@ -13,8 +14,10 @@ namespace RestfullChess.Api
             builder.Logging.AddConsole();
 
             // Add services to the container.
-            new RegisterApiComponent().Register(builder.Services);
+            new WebApiComponentRegistration().Register(builder.Services);
             new BusinessComponentRegistration().Register(builder.Services);
+            new DataAccessInMemoryComponentRegistration().Register(builder.Services);
+
             // Build middleware
             var app = builder.Build();
             ApplyMiddleware(app);

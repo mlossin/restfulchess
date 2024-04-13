@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using RestfulChess.Common.Contracts.Enumerations;
 
 namespace RestfulChess.Common.Contracts.Figures
 {
@@ -10,5 +8,9 @@ namespace RestfulChess.Common.Contracts.Figures
     public class Queen : ChessFigure
     {
         private int _baseValue = 15;
+        public override FigureType GetFigureType()
+        {
+            return FigureType.Queen;
+        }
     }
 }

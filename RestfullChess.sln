@@ -23,9 +23,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{22D44A1B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLibraryTests", "tests\SharedLibraryTests\SharedLibraryTests.csproj", "{BD040AF6-20C3-48EB-92C3-72F23249BB67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulChess.Business.Contracts", "src\RestfulChess.Business.Contracts\RestfulChess.Business.Contracts.csproj", "{15348F07-FBE0-4E52-9B59-10CA7048F6A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestfulChess.Business.Contracts", "src\RestfulChess.Business.Contracts\RestfulChess.Business.Contracts.csproj", "{15348F07-FBE0-4E52-9B59-10CA7048F6A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{872FE72C-D25F-46E8-9633-14538C973B8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{6512D96F-DCDB-481E-B266-6259A456B497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulChess.DataAccess.InMemory", "RestfulChess.DataAccess.InMemory\RestfulChess.DataAccess.InMemory.csproj", "{7560871F-4554-4239-B4A9-022867BA2A80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulChess.DataAccess.Contracts", "RestfulChess.DataAccess.Contracts\RestfulChess.DataAccess.Contracts.csproj", "{38F3025B-3F3F-4247-9C31-971A36E8D110}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +71,14 @@ Global
 		{15348F07-FBE0-4E52-9B59-10CA7048F6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15348F07-FBE0-4E52-9B59-10CA7048F6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15348F07-FBE0-4E52-9B59-10CA7048F6A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7560871F-4554-4239-B4A9-022867BA2A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7560871F-4554-4239-B4A9-022867BA2A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7560871F-4554-4239-B4A9-022867BA2A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7560871F-4554-4239-B4A9-022867BA2A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F3025B-3F3F-4247-9C31-971A36E8D110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F3025B-3F3F-4247-9C31-971A36E8D110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F3025B-3F3F-4247-9C31-971A36E8D110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F3025B-3F3F-4247-9C31-971A36E8D110}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +92,8 @@ Global
 		{CF68780E-6D9F-4709-81C9-58BAAE264E03} = {7FFCC7E6-B039-4B3B-AAC9-D9417A477070}
 		{BD040AF6-20C3-48EB-92C3-72F23249BB67} = {22D44A1B-189C-4404-8CA8-7590714EC172}
 		{15348F07-FBE0-4E52-9B59-10CA7048F6A0} = {872FE72C-D25F-46E8-9633-14538C973B8C}
+		{7560871F-4554-4239-B4A9-022867BA2A80} = {6512D96F-DCDB-481E-B266-6259A456B497}
+		{38F3025B-3F3F-4247-9C31-971A36E8D110} = {6512D96F-DCDB-481E-B266-6259A456B497}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0AD0569-BE12-48B7-92FB-0E113295C8D1}

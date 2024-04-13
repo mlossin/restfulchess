@@ -10,8 +10,13 @@ namespace RestfulChess.Business.Contracts
     /// <summary>
     /// Interface for playing the chess game
     /// </summary>
-    public interface IChessGame
+    public interface IChessGameProcessor
     {
+        /// <summary>
+        /// Sets the Game to use by its identifier.
+        /// </summary>
+        Task SetGame(long gameIdentfier);
+
         /// <summary>
         /// Move a figure based on the current active player
         /// </summary>
@@ -23,9 +28,9 @@ namespace RestfulChess.Business.Contracts
         Task<ICollection<BoardPosition>> GetPossiblePositionsAsync(BoardPosition sourcePosition);
 
         /// <summary>
-        /// Start a new game of chess
+        /// Start a new game of chess. Returns an game identifier.
         /// </summary>
-        Task StartNewGameAsync(string whitePlayerName, string blackPlayerName);
+        Task<long> StartNewGameAsync(string whitePlayerName, string blackPlayerName);
 
         /// <summary>
         /// Check if a game is currently running

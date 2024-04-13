@@ -7,6 +7,9 @@ using RestfulChess.Common.Implementations.Extensions;
 
 namespace RestfulChess.Business.Implementation
 {
+    /// <summary>
+    /// Logic to create a chessboard
+    /// </summary>
     public class ChessBoardCreator
     {
         /// <summary>

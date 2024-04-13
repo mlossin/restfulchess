@@ -10,6 +10,9 @@ namespace RestfulChess.Common.Contracts.Games
     {
         public EPlayerColors Color { get; set; }
         public string Name { get; set; }
+        /// <summary>
+        /// Tracking of the time a player used
+        /// </summary>
         public long TimeUsed { get; set; }
     }
 }

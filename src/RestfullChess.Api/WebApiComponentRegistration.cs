@@ -7,13 +7,13 @@ using RestfullChess.Api.Middlewares;
 namespace RestfullChess.Api
 {
     /// <summary>
-    /// Registrierrungskomponente für die API
+    /// Registers all WebApi components 
     /// </summary>
-    public class RegisterApiComponent : IRegistrationComponent
+    public class WebApiComponentRegistration : IRegistrationComponent
     {
         public void Register(IServiceCollection serviceCollection)
         {
-            serviceCollection.AddAutoMapper(typeof(RegisterApiComponent).Assembly); //register this assembly
+            serviceCollection.AddAutoMapper(typeof(WebApiComponentRegistration).Assembly); //register this assembly
             serviceCollection.AddControllers();
             serviceCollection.AddCors();
             serviceCollection.AddEndpointsApiExplorer();
