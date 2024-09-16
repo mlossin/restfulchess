@@ -1,4 +1,5 @@
 using RestfulChess.Business.Implementation;
+using RestfulChess.Business.Implementation.Registrations;
 using RestfulChess.DataAccess.InMemory;
 using RestfullChess.Api.Middlewares;
 
@@ -15,8 +16,8 @@ namespace RestfullChess.Api
 
             // Add services to the container.
             new WebApiComponentRegistration().Register(builder.Services);
-            new BusinessComponentRegistration().Register(builder.Services);
-            new DataAccessInMemoryComponentRegistration().Register(builder.Services);
+            builder.Services.RegisterDataAccessInMemory();
+            builder.Services.RegisterBusiness();
 
             // Build middleware
             var app = builder.Build();
